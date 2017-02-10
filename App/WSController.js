@@ -2,18 +2,26 @@ angular.module('WsApp', [])
     .controller('WsCtrl',function($scope) {
       $scope.data=[{name:'Tharaka',age:23},{name:'Madushika',age:23},{name:'Dilan',age:24}];
       $scope.NameValue=0;
+      $scope.entername='';
 
       $scope.NametoChar=function (name) {
-        for (var i = 0; i < name.length; i++) {
-          $scope.NameValue=$scope.NameValue+parseInt(ChartoNumb(name.charAt(i)));
+        let val=0;
+        if(undefined==name){$scope.clear(); return 0;}
+        else {
+          for (var i = 0; i < name.length; i++) {
+            val=val+parseInt(ChartoNumb(name.charAt(i)));
+          }
         }
-          console.log($scope.NameValue);
-          $scope.clear();
-
+        setTimeout(function () {
+           $scope.$apply(function () {
+               $scope.NameValue = val;
+           });
+        },10);
       };
 
       $scope.clear = function (){
         $scope.NameValue=0;
+        $scope.entername='';
       };
 
       $scope.hello = function (){

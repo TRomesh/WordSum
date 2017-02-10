@@ -15,16 +15,16 @@
           <div class="col-md-12"></div>
           <div class="col-md-12"></div>
           <div class="col-md-4">
-            <input type="text" placeholder="Enter Name or Word" class="form-control" ng-model="entername" ng-change="NametoChar(entername)">
+            <input type="text" placeholder="Enter Name or Word" ng-pattern="/.*[a-zA-Z]+.*/" class="form-control" ng-model="entername" ng-change="NametoChar(entername)" required>
           </div>
-          <div class="col-md-8 float-left" style="margin-top:10px;">
+          <div class="col-md-8 pull-right" style="margin-top:10px;">
             <button type="button"  class="btn btn-default" ng-click="NametoChar(entername)">Add</button>
             <button type="button"  class="btn btn-default" ng-click="clear()">Clear</button>
           </div>
         </div>
         <div class="jumbotron col-md-5" style="margin-top:20px;">
             <p>
-              <h3>Summation is {{NameValue}}</h3>
+              <h3 ng-model="$parent.NameValue">Summation is {{NameValue}}</h3>
             </p>
         </div>
       </form>
