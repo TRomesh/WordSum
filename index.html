@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  ng-app="WsApp">
+    <head>
+        <title></title>
+        <script type="text/javascript" src="./node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery;"></script>
+        <script type="text/javascript" src="./App/index.js"></script>
+        <script type="text/javascript" src="./App/WSController.js"></script>
+        <link rel="stylesheet" type="text/css" href="./App/assets/photon.min.css"/>
+        <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body ng-controller="WsCtrl" style="margin-top:20px;">
+      <form class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+          <div class="col-md-12"></div>
+          <div class="col-md-4">
+            <input type="text" placeholder="Enter Name or Word" class="form-control" ng-model="entername" ng-change="NametoChar(entername)">
+          </div>
+          <div class="col-md-8 float-left" style="margin-top:10px;">
+            <button type="button"  class="btn btn-default" ng-click="NametoChar(entername)">Add</button>
+            <button type="button"  class="btn btn-default" ng-click="clear()">Clear</button>
+          </div>
+        </div>
+        <div class="jumbotron col-md-5" style="margin-top:20px;">
+            <p>
+              <h3>Summation is {{NameValue}}</h3>
+            </p>
+        </div>
+      </form>
+    </body>
+</html>

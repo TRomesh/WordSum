@@ -1,0 +1,22 @@
+{
+  "name": "wordsum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=App/assets/WSlogo.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=App/assets/WSlogo.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"WordSum\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=App/assets/WSlogo.png --prune=true --out=release-builds"
+  },
+  "author": "Thaaraka Romesh",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15"
+  }
+}
