@@ -1,6 +1,5 @@
 angular.module('WsApp', [])
     .controller('WsCtrl',function($scope) {
-      $scope.data=[{name:'Tharaka',age:23},{name:'Madushika',age:23},{name:'Dilan',age:24}];
       $scope.NameValue=0;
       $scope.entername='';
 
