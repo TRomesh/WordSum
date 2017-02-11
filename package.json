@@ -1,7 +1,7 @@
 {
   "name": "wordsum",
   "version": "1.0.0",
-  "description": "",
+  "description": "ElectronApp",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
@@ -9,7 +9,7 @@
     "build": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=App/assets/WSlogo.ico --prune=true --out=release-builds --version-string.CompanyName=DevX --version-string.FileDescription=DevX --version-string.ProductName=\"WordSum\"",
     "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=App/assets/WSlogo.png --prune=true --out=release-builds"
   },
-  "author": "Thaaraka Romesh",
+  "author": "Tharaka Romesh",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.6.2",
